@@ -6,9 +6,16 @@ using System.Data.SqlClient;
 
 namespace HairSalon
 {
-  public class HairSalon : IDisposable
+  public class ClientTest : IDisposable
   {
-    public HairSalon()
+    public ClientTest()
     {
         DBConfiguration.ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=hair_salon_test;Integrated Security=SSPI;";
     }
+
+    public void Dispose()
+    {
+    }
+
+  }
+}
