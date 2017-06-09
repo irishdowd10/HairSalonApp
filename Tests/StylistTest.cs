@@ -29,6 +29,19 @@ namespace HairSalon
     }
 
     [Fact]
+    public void ReturnAllStylists()
+    {
+      Stylist stylist = new Stylist("Jody Johnson", 1);
+      Stylist stylist2 = new Stylist("Judy Johnson", 2);
+
+      stylist.Save();
+      stylist2.Save();
+
+      List<Stylist> stylistList = Stylist.GetAll();
+      Assert.Equal(new List<Stylist> { stylist, stylist2 }, stylistList);
+    }
+
+    [Fact]
     public void DeleteStylist()
     {
       Stylist stylist = new Stylist("Jody Johnson", 1);

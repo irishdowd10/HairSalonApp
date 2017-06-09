@@ -11,10 +11,10 @@ This program gives the user the opportunity to add a list of stylists, and for e
 |Behavior| User Input String| User Input Word| Output |
 |---|---|---|---|
 |Program will create and return stylist. |"Jody Johnson"| "Jody Johnson"|
+|Program will return all stylists. | [List Stylists Button] | "Names of all stylists"|
 |Program will delete stylist. |"Jody Johnson"| " "|
 |Program will create a client under stylist. |"Frank Jones"| "Frank Jones "|
 |Program will delete client. |"Frank Jones"| " "|
-|Program will return all stylists. | [List Stylists Button] | "Names of all stylists"|
 |Program will return edited client info. |"Jim Jones"| "Jim Jones"|
 
 ### Link
