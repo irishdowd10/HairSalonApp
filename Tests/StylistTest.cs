@@ -28,9 +28,23 @@ namespace HairSalon
       Assert.Equal(result, testId);
     }
 
+    [Fact]
+    public void DeleteStylist()
+    {
+      Stylist stylist = new Stylist("Jody Johnson", 1);
+
+      stylist.Save();
+
+      stylist.Delete();
+
+      int length = Stylist.GetAll().Count;
+
+      Assert.Equal(length, 0);
+    }
+
     public void Dispose()
     {
-
+      Stylist.DeleteAll();
     }
   }
 }
