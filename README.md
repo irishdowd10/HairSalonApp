@@ -10,8 +10,12 @@ This program gives the user the opportunity to add a list of stylists, and for e
 ## Specifications
 |Behavior| User Input String| User Input Word| Output |
 |---|---|---|---|
-|Program will display stylist name . |"Jody Johnson"| "Jody Johnson"| 1 |
-
+|Program will display stylist name . |"Jody Johnson"| "Jody Johnson"|
+|Delete stylist name . |"Jody Johnson"| " "|
+|Display client name under stylist name . |"Frank Jones, add client button"| "Frank Jones "|
+|Delete client name . |"Frank Jones, delete client button"| " "|
+|Displays name of all stylists. |"All stylists button"| "Names of all stylists "|
+|Display edited client info. |"edit client, add client edit button"| "Updated info"|
 
 ### Link
 
