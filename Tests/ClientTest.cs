@@ -50,5 +50,17 @@ namespace HairSalon
       Assert.Equal(clientList.Count, 0);
     }
 
+    [Fact]
+    public void UpdateClient()
+    {
+      Client client = new Client("Frank Jones", parentStylist.GetId(), 1);
+      client.Save();
+
+      client.Update("Jim Jones");
+      Client savedClient = Client.GetAll()[0];
+
+      Assert.Equal(client.GetName(), "Jim Jones");
+    }
+
   }
 }
