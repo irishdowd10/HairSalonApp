@@ -43,7 +43,7 @@ namespace HairSalon
     }
 
     [Fact]
-    public void DeleteStylist()
+    public void DeleteStylistNoClients()
     {
       Stylist stylist = new Stylist("Jody Johnson", 1);
 
@@ -54,6 +54,34 @@ namespace HairSalon
       int length = Stylist.GetAll().Count;
 
       Assert.Equal(length, 0);
+    }
+
+    // [Fact]
+    // public void DeleteStylistWithClients()
+    // {
+    //   Stylist stylist = new Stylist("Jody Johnson", 1);
+    //   Client client = new Client("Frank Beans", 1, 1);
+    //
+    //   stylist.Save();
+    //   client.Save();
+    //
+    //   stylist.Delete();
+    //
+    //   int clientLength = Client.GetAll().Count;
+    //   Assert.Equal(clientLength, 0);
+    // }
+
+    [Fact]
+    public void UpdateStylist()
+    {
+      Stylist stylist = new Stylist("John Jones", 1);
+      stylist.Save();
+
+      stylist.Update("Jim Jones");
+
+      Stylist savedStylist = Stylist.GetAll()[0];
+
+      Assert.Equal(savedStylist.GetName(), "Jim Jones");
     }
 
     public void Dispose()

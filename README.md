@@ -8,8 +8,8 @@ This program gives the user the opportunity to add a list of stylists, and for e
 
 
 ## Specifications
-|Behavior| User Input String| User Input Word| Output |
-|---|---|---|---|
+|Behavior| User Input| Output |
+|---|---|---|
 |Program will create and return stylist. |"Jody Johnson"| "Jody Johnson"|
 |Program will return all stylists. | [List Stylists Button] | "Names of all stylists"|
 |Program will delete stylist. |"Jody Johnson"| " "|
