@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 
 namespace HairSalon
 {
+  [Collection("HairSalon")]
   public class ClientTest : IDisposable
   {
     Stylist parentStylist;
@@ -20,6 +21,7 @@ namespace HairSalon
 
     public void Dispose()
     {
+      Stylist.DeleteAll();
       Client.DeleteAll();
     }
 
@@ -33,6 +35,19 @@ namespace HairSalon
       Client savedClient = Client.GetAll()[0];
 
       Assert.Equal(savedClient, client);
+    }
+
+    [Fact]
+    public void DeleteClient()
+    {
+      Client client = new Client("Frank Jones", parentStylist.GetId(), 1);
+
+      client.Save();
+      client.Delete();
+
+      List<Client> clientList = Client.GetAll();
+
+      Assert.Equal(clientList.Count, 0);
     }
 
   }
