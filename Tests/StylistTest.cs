@@ -56,20 +56,6 @@ namespace HairSalon
       Assert.Equal(length, 0);
     }
 
-    // [Fact]
-    // public void DeleteStylistWithClients()
-    // {
-    //   Stylist stylist = new Stylist("Jody Johnson", 1);
-    //   Client client = new Client("Frank Beans", 1, 1);
-    //
-    //   stylist.Save();
-    //   client.Save();
-    //
-    //   stylist.Delete();
-    //
-    //   int clientLength = Client.GetAll().Count;
-    //   Assert.Equal(clientLength, 0);
-    // }
 
     [Fact]
     public void UpdateStylist()
