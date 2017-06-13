@@ -26,7 +26,7 @@ https://github.com/irishdowd10/HairSalonApp.git
 * Clone the project files from link in your powershell > run dnu restore >and then run dnu kestrel > then type localhost:5004
 
 
-* In SQLCMD: > CREATE DATABASE hair_salon; > GO > USE todo; > GO > CREATE TABLE stylists (id INT IDENTITY(1,1), name VARCHAR(255)); > CREATE TABLE clients (id INT IDENTITY(1,1), name VARCHAR(255), stylist_id int); > GO
+* In SQLCMD: > CREATE DATABASE hair_salon; > GO > USE hair_salon; > GO > CREATE TABLE stylists (id INT IDENTITY(1,1), name VARCHAR(255)); > CREATE TABLE clients (id INT IDENTITY(1,1), name VARCHAR(255), stylist_id int); > GO
 
 
 
